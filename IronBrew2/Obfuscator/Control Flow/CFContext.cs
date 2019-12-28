@@ -83,6 +83,7 @@ namespace IronBrew2.Obfuscator.Control_Flow
 
 					if (do_)
 					{
+						c.Constants.Remove((Constant)instr.RefOperands[0]);
 						instr.OpCode = Opcode.Move;
 						instr.A = 0;
 						instr.B = 0;
